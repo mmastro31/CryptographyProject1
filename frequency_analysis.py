@@ -22,3 +22,7 @@ def createDictionary(text):
 
     return frequencies
 
+
+testText = 'wqehrjnjn qwefjknqefbnbhi qjefbn jk jqwebf jinqefj qjeqwoieruuwerzn asnfgkjqjkqf'
+frequencyTable = createDictionary(testText)
+print(frequencyTable)
