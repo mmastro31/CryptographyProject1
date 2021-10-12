@@ -8,4 +8,4 @@ encryption.py ------> Replicated encryption scheme, used for testing
 
 requirements.txt ---> Required software to run files 
 
-decryption.py ------> Decryption source file
+Ho-Mastrogiovanni-Cantu-Decrypt-Source.py ------> Decryption source file
