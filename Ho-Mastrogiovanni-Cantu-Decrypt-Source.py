@@ -67,16 +67,24 @@ def decrypt_dict1(cipher):
         return None
     # find the maximum ngram value of each plaintext and return the one with the largest value
     max_ngram = list(map(lambda x: (x.plaintext, max(x.find_ngram_freq(5).values())), r_shifts))
-    result = max(max_ngram, key=lambda x: x[1])   
-    return result[0]
+    result = max(max_ngram, key=lambda x: x[1])
+    return result
 
+def decrypt_dict2(cipher):
+    result = None
+    return result
 
 
 def __main__():
     sys.stdout.write('Welcome! Enter Ciphertext below. \n')
     cipher = input()
-    test1_decryption = decrypt_dict1(cipher)
-    sys.stdout.write('Decryption complete! Here is our guess: \n')
-    sys.stdout.write(test1_decryption)
+    test1_result = decrypt_dict1(cipher)
+    if test1_result[1] < 7:
+        test2_result = decrypt_dict2(cipher)
+        sys.stdout.write('Decryption complete! Here is our guess: \n')
+        sys.stdout.write(test2_result)
+    else:
+        sys.stdout.write('Decryption complete! Here is our guess: \n')
+        sys.stdout.write(test1_result[0])
 
 __main__()
