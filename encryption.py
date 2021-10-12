@@ -85,18 +85,22 @@ def get_encrypted_text(prob):
         testnum = 1
         randomint = random.randint(0,4)
         message = dictionary_1[randomint]
+        dictnum = randomint + 1
     else:
         testnum = 2
         message = combine_words(500)
+        dictnum = 0
 
     cipher = encrypt(message,j,k,t,prob)
-    return cipher,testnum
+
+    return cipher,testnum,dictnum
 
 def __main__():
     sys.stdout.write('Encryption scheme for testing \n')
     prob = input('Enter probability of random character insertion between 0 and 1 (recommended: 0.05): ')
-    c,testnum = get_encrypted_text(prob)
+    c,testnum,dictnum = get_encrypted_text(prob)
     sys.stdout.write('Test: ' + str(testnum) + '\n')
+    sys.stdout.write('Dict: ' + str(dictnum) + '\n')
     sys.stdout.write(c)
 
 
