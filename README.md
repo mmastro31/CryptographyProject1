@@ -19,4 +19,4 @@ Project1Encryption.exe -----------> Binary File for Encryption
 
 # How to Run Program
 1) Open a terminal
-2) type: Ho-Mastrogiovanni-Cantu-Binary
+2) type: Ho-Mastrogiovanni-Cantu-Decrypt-Binary
